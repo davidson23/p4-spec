@@ -7173,15 +7173,16 @@ The P4 compiler should provide:
 ## Summary of changes made in version 1.2.0
 
 * Constrain `default` label position for `switch` statements.
-* Allow empty tuples.
-* Added `@deprecated` annotation.
-* Relaxed the structure of annotation bodies.
+* Allow empty tuples (Seciton [#sec-tuple-types]).
+* Added `@deprecated` annotation (Section [#sec-deprecated-anno]).
+* Relaxed the structure of annotation bodies (Section [#sec-annotations]).
 * Removed the `@pkginfo` annotation. This is defined by the P4Runtime
   specification.
 * Added error `ParserInvalidArgument` (Sections
   [#sec-packet-extract-two], [#sec-skip-bits]).
 * Clarify the significance of order of entries in `const entries`
   (Section [#sec-entries]).
+* Added structure overlays (Section [#sec-overlays]).
 
 ## Summary of changes made in version 1.1.0
 

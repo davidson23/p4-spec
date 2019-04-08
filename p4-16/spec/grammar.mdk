@@ -579,17 +579,13 @@ argument
     | DONTCARE
     ;
 
-structInitializerExpression
-    : '{' fieldInitializerExpressionList '}'
+kvList
+    : kvPair
+    | kvList ',' kvPair
     ;
 
-fieldInitializerExpressionList
-    : /* empty */
-    | fieldInitializerExpressionList ',' fieldInitializer
-    ;
-
-fieldInitializer
-    : '.' name '=' expression
+kvPair
+    : name '=' expression
     ;
 
 expressionList
@@ -735,7 +731,7 @@ expression
     | expression '[' expression ']'
     | expression '[' expression ':' expression ']'
     | '{' expressionList '}'
-    | structInitializerExpression
+    | '{' kvList '}'
     | '(' expression ')'
     | '!' expression
     | '~' expression
